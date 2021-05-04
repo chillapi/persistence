@@ -1,5 +1,5 @@
 {
-  "name": "persistence",
+  "name": "@chillapi/persistence",
   "version": "1.0.0",
   "description": "ChillAPI Persistence Module",
   "scripts": {
