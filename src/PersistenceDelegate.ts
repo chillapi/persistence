@@ -30,6 +30,8 @@ export class PersistenceDelegate implements Delegate {
                         return Promise.reject("Expected scalar result, multiple columns returned");
                     }
                     result = Object.values(row)[0];
+                case 'none':
+                    return Promise.resolve();
                 case 'set':
                 default:
                     result = queryResult;
@@ -39,7 +41,7 @@ export class PersistenceDelegate implements Delegate {
             } else {
                 console.warn("Query returned result that was not assigned to a variable");
             }
-            Promise.resolve();
+            return Promise.resolve();
         } catch (err) {
             return Promise.reject(err);
         }
