@@ -1,0 +1,14 @@
+config:
+  query: >-
+    UPDATE "users"
+    SET "email" = ?
+    WHERE "id" = ?;
+  params:
+    - body.email
+    - query.id
+  returnType: none
+params: 
+  query:
+    id: 1
+  body:
+    email: other@email.com

@@ -1,0 +1,19 @@
+config:
+  query: >-
+    SELECT * from "users"
+  returnType: set
+  setVariable: result
+params: []
+result:
+  - id: 1
+    name: 'Nigel'
+    email: 'nigel@email.com'
+    dob: '2001-09-02'
+  - id: 2
+    name: 'Nakaz'
+    email: 'nakaz@email.com'
+    dob: '2002-03-14'
+  - id: 3
+    name: 'Jaywon'
+    email: 'jaywon@email.com'
+    dob: '1999-01-21'

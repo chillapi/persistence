@@ -1,0 +1,8 @@
+config:
+  query: >-
+    SELECT * FROM "user" 
+  params: []
+  returnType: set
+  setVariable: result
+params: []
+error: 'Error: SELECT * FROM "user"  - SQLITE_ERROR: no such table: user'

@@ -1,0 +1,16 @@
+config:
+  query: >-
+    SELECT * FROM "users" 
+    WHERE "name" LIKE '%'||?||'%'
+  params:
+    - query.search
+  returnType: set
+  setVariable: result
+params:
+  query:
+    search: jay
+result:
+  - id: 3
+    name: 'Jaywon'
+    email: 'jaywon@email.com'
+    dob: '1999-01-21'

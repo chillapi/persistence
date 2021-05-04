@@ -1,0 +1,16 @@
+config:
+  query: >-
+    SELECT * FROM "users" 
+    WHERE "id" = ?
+  params:
+    - query.id
+  returnType: row
+  setVariable: result
+params:
+  query:
+    id: 1
+result:
+  id: 1
+  name: 'Nigel'
+  email: 'nigel@email.com'
+  dob: '2001-09-02'

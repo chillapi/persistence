@@ -1,0 +1,11 @@
+config:
+  query: >-
+    DELETE FROM "users"
+    WHERE "id" = ?
+  params:
+    - query.id
+  returnType: none
+params: 
+  query:
+    id: 1
+result:

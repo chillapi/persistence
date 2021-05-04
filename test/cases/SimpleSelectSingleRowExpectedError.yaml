@@ -1,0 +1,7 @@
+config:
+  query: >-
+    SELECT * from "users"
+  returnType: row
+  setVariable: result
+params: []
+error: Expected single row result
