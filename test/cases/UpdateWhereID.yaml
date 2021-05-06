@@ -1,4 +1,5 @@
 config:
+  module: persistence
   query: >-
     UPDATE "users"
     SET "email" = ?

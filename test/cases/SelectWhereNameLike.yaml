@@ -1,4 +1,5 @@
 config:
+  module: persistence
   query: >-
     SELECT * FROM "users" 
     WHERE "name" LIKE '%'||?||'%'

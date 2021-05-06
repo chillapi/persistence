@@ -12,7 +12,7 @@ export class PersistenceDelegate implements Delegate {
         const queryParams = this.config.params ?
             this.config.params.map(param => get(delegateParams,param)) : [];
         try {
-            const queryResult: any[] = await (context.persistence as Knex).raw(this.config.query, queryParams);
+            const queryResult: any[] = await (context[this.config.module] as Knex).raw(this.config.query, queryParams);
             let result;
             switch (this.config.returnType) {
                 case 'row':

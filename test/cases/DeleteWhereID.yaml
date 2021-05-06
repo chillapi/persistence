@@ -1,4 +1,5 @@
 config:
+  module: persistence
   query: >-
     DELETE FROM "users"
     WHERE "id" = ?

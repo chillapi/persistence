@@ -53,7 +53,7 @@ async function teardown(persistence: Knex): Promise<void> {
 
 describe('Run test cases', () => {
     const files: string[] = fs.readdirSync(path.join(__dirname, 'cases'));
-    let persistence = knex(persistenceOptions);
+    const persistence = knex(persistenceOptions);
 
     beforeAll(() => {
         return setup(persistence);

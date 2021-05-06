@@ -27,7 +27,7 @@
   },
   "homepage": "https://github.com/chillapi/persistence#readme",
   "dependencies": {
-    "@chillapi/api": "1.0.3",
+    "@chillapi/api": "1.0.7",
     "knex": "0.95.4",
     "lodash": "4.17.21"
   },

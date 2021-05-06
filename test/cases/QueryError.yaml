@@ -1,4 +1,5 @@
 config:
+  module: persistence
   query: >-
     SELECT * FROM "user" 
   params: []
