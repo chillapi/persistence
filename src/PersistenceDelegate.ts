@@ -2,17 +2,18 @@ import { Delegate } from '@chillapi/api';
 import { Knex } from 'knex';
 import { PersistenceDelegateConfig } from './PersistenceDelegateConfig';
 import { get } from 'lodash';
+import { Context } from '@chillapi/api/src/chill-api/Context';
 
 export class PersistenceDelegate implements Delegate {
 
     constructor(private config: PersistenceDelegateConfig) {
     }
 
-    async process(context: any, delegateParams: any): Promise<void> {
+    async process(context: Context, delegateParams: any): Promise<void> {
         const queryParams = this.config.params ?
-            this.config.params.map(param => get(delegateParams,param)) : [];
+            this.config.params.map(param => get(delegateParams, param)) : [];
         try {
-            const queryResult: any[] = await (context[this.config.module] as Knex).raw(this.config.query, queryParams);
+            const queryResult: any[] = await (context.getComponent(this.config.module) as Knex).raw(this.config.query, queryParams);
             let result;
             switch (this.config.returnType) {
                 case 'row':
