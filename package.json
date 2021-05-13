@@ -1,6 +1,6 @@
 {
   "name": "@chillapi/persistence",
-  "version": "1.0.9",
+  "version": "1.0.13",
   "description": "ChillAPI Persistence Module",
   "scripts": {
     "prebuild": "rimraf dist/*",
@@ -27,7 +27,7 @@
   },
   "homepage": "https://github.com/chillapi/persistence#readme",
   "dependencies": {
-    "@chillapi/api": "1.0.12",
+    "@chillapi/api": "1.0.13",
     "knex": "0.95.4",
     "lodash": "4.17.21"
   },

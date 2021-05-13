@@ -4,7 +4,8 @@ import { PersistenceModuleConfig } from "./PersistenceModuleConfig";
 
 export class PersistenceModuleLoader implements ModuleLoader {
 
-    loadModule(context: Context, config: ModuleConfig) {
+    async loadModule(context: Context, config: ModuleConfig): Promise<void> {
         context.setComponent(config.id || 'persistence', knex(config as PersistenceModuleConfig));
+        return Promise.resolve();
     }
 }
