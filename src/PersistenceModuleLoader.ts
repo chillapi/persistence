@@ -1,7 +1,6 @@
 import knex from "knex";
-import { ModuleConfig, ModuleLoader } from '@chillapi/api';
+import { ModuleConfig, ModuleLoader, Context } from '@chillapi/api';
 import { PersistenceModuleConfig } from "./PersistenceModuleConfig";
-import { Context } from '@chillapi/api';
 
 export class PersistenceModuleLoader implements ModuleLoader {
 

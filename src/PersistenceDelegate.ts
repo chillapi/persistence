@@ -1,8 +1,7 @@
-import { Delegate } from '@chillapi/api';
+import { Delegate, Context } from '@chillapi/api';
 import { Knex } from 'knex';
 import { PersistenceDelegateConfig } from './PersistenceDelegateConfig';
 import { get } from 'lodash';
-import { Context } from '@chillapi/api';
 
 export class PersistenceDelegate implements Delegate {
 
