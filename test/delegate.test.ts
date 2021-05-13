@@ -73,10 +73,7 @@ describe('Run test cases', () => {
         const useCase: any = yaml.load(configContent);
         const queryConfig: PersistenceDelegateConfig = useCase.config;
         const delegate = new PersistenceDelegate(queryConfig);
-        const context = {
-            getComponent: jest.fn(() => persistence),
-            setComponent: jest.fn()
-        };
+        const context = { persistence };
         try {
             await delegate.process(context, useCase.params);
             if (queryConfig.setVariable) {
